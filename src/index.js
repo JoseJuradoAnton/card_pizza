@@ -80,9 +80,9 @@ function Menu() {
 }
 
 function Footer() {
-  const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 22;
+  // const hour = new Date().getHours();
+  // const openHour = 12;
+  // const closeHour = 22;
 
   // if (hour >= openHour && hour <= closeHour) alert("we´re currently open");
   // else alert("Sorry we're closed");
