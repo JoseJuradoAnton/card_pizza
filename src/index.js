@@ -7,42 +7,42 @@ const pizzaData = [
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
     price: 6,
-    photoName: "pizzas/focaccia.jpg",
+    photoName: "../focaccia.jfif",
     soldOut: false,
   },
   {
     name: "Pizza Margherita",
     ingredients: "Tomato, mozarella",
     price: 10,
-    photoName: "pizzas/Margherita.jpg",
+    photoName: "../funghi.jfif",
     soldOut: false,
   },
   {
     name: "Pizza Spinaci",
     ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
     price: 12,
-    photoName: "pizzas/salamino.jpg",
+    photoName: "../spinaci.jpg",
     soldOut: true,
   },
   {
     name: "Pizza Funghi",
     ingredients: "Tomato, mozarella, mushrooms, and onion",
     price: 12,
-    photoName: "pizzas/funghi.jpg",
+    photoName: "../funghi.jfif",
     soldOut: false,
   },
   {
     name: "Pizza Salamino",
     ingredients: "Tomato, mozarella, and pepperoni",
     price: 15,
-    photoName: "pizzas/salamino.jpg",
+    photoName: "../salamino.jfif",
     soldOut: true,
   },
   {
     name: "Pizza Prosciutto",
     ingredients: "Tomato, mozarella, ham, arangula, and burrata cheese",
     price: 18,
-    photoName: "pizzas/prosciutto.jpg",
+    photoName: "../prosciutto.jfif",
     soldOut: false,
   },
 ];
@@ -72,7 +72,7 @@ function Menu() {
       <h2>Our menu</h2>
       <div>
         {pizzaData.map((pizza) => (
-          <Pizza pizzaObj={pizza} />
+          <Pizza pizzaObj={pizza} key={pizza.name} />
         ))}
       </div>
     </main>
@@ -103,7 +103,7 @@ function Pizza(props) {
       <div>
         <h3>{props.pizzaObj.name}</h3>
         <p>{props.pizzaObj.ingredients}</p>
-        <span>{props.pizzaObj.price + 3}</span>
+        <span>{props.pizzaObj.price}</span>
       </div>
     </div>
   );
